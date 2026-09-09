@@ -1,12 +1,20 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GCash </title>
+<title>GCash Security Simulation</title>
 
 <style>
+
+/* =========================
+   GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,25 +28,29 @@ body {
     color: #222;
 }
 
+
 /* =========================
    BACKGROUND
 ========================= */
 
 .page {
     min-height: 100vh;
+
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.05)
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.10)
         ),
         url("img/bts-background.jpg");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     position: relative;
 }
+
 
 /* =========================
    NAVIGATION
@@ -47,6 +59,7 @@ body {
 .navbar {
     height: 75px;
     width: 100%;
+
     background: white;
 
     display: flex;
@@ -68,7 +81,6 @@ body {
     font-size: 30px;
     font-weight: 800;
     color: #0072ff;
-    letter-spacing: -1px;
 }
 
 .nav-links {
@@ -81,15 +93,15 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 14px;
-    font-weight: 500;
 }
 
 .nav-links a:hover {
     color: #0072ff;
 }
 
+
 /* =========================
-   MAIN HERO
+   HERO
 ========================= */
 
 .hero {
@@ -104,8 +116,9 @@ body {
     gap: 60px;
 }
 
+
 /* =========================
-   LEFT SIDE
+   HERO TEXT
 ========================= */
 
 .hero-text {
@@ -113,24 +126,6 @@ body {
     max-width: 650px;
 
     text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-.simulation-label {
-    display: inline-block;
-
-    background: rgba(255,255,255,0.92);
-    color: #0072ff;
-
-    padding: 8px 16px;
-
-    border-radius: 20px;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    margin-bottom: 20px;
-
-    text-shadow: none;
 }
 
 .hero-text h1 {
@@ -144,7 +139,6 @@ body {
 
 .hero-text h2 {
     font-size: clamp(28px, 4vw, 55px);
-    line-height: 1;
 
     margin-bottom: 20px;
 
@@ -154,9 +148,8 @@ body {
 .hero-text p {
     font-size: 18px;
     line-height: 1.6;
-
-    max-width: 550px;
 }
+
 
 /* =========================
    LOGIN CARD
@@ -176,9 +169,8 @@ body {
         0 20px 50px rgba(0,0,0,0.25);
 
     text-align: center;
-
-    transition: 0.3s ease;
 }
+
 
 /* =========================
    CARD HEADER
@@ -206,6 +198,7 @@ body {
     margin-bottom: 25px;
 }
 
+
 /* =========================
    STEPS
 ========================= */
@@ -221,6 +214,7 @@ body {
 }
 
 @keyframes fadeIn {
+
     from {
         opacity: 0;
         transform: translateY(8px);
@@ -230,7 +224,9 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
+
 
 /* =========================
    FORM
@@ -275,8 +271,6 @@ body {
     font-size: 16px;
 
     outline: none;
-
-    transition: 0.2s;
 }
 
 .phone-input:focus {
@@ -285,6 +279,7 @@ body {
     box-shadow:
         0 0 0 3px rgba(0,114,255,0.1);
 }
+
 
 /* =========================
    BUTTON
@@ -320,9 +315,6 @@ body {
     transform: translateY(-1px);
 }
 
-.primary-button:active {
-    transform: translateY(0);
-}
 
 /* =========================
    ERROR
@@ -342,6 +334,7 @@ body {
     display: block;
 }
 
+
 /* =========================
    VERIFIED
 ========================= */
@@ -359,6 +352,7 @@ body {
     color: #18a558;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -376,111 +370,13 @@ body {
     color: #333;
 }
 
-/* =========================
-   MPIN
-========================= */
-
-.pin-dots {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    margin: 20px 0;
-}
-
-.pin-dot {
-    width: 13px;
-    height: 13px;
-
-    border-radius: 50%;
-
-    background: #ddd;
-
-    transition: 0.2s;
-}
-
-.pin-dot.filled {
-    background: #0072ff;
-}
-
-.keypad {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 10px;
-
-    max-width: 270px;
-
-    margin: 0 auto;
-}
-
-.key {
-    height: 55px;
-
-    border: 1px solid #eee;
-
-    background: #fafafa;
-
-    border-radius: 10px;
-
-    font-size: 19px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: 0.15s;
-}
-
-.key:hover {
-    background: #f0f5ff;
-}
-
-.key:active {
-    transform: scale(0.95);
-
-    background: #e5efff;
-}
-
-.key.clear {
-    color: #e53935;
-}
-
-.key.back {
-    color: #555;
-}
 
 /* =========================
-   HELP LINKS
+   DEMO VERIFICATION
 ========================= */
 
-.help-links {
+.demo-notice {
     margin-top: 18px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    font-size: 12px;
-}
-
-.help-links a {
-    color: #0072ff;
-
-    text-decoration: none;
-
-    cursor: pointer;
-}
-
-/* =========================
-   SECURITY NOTICE
-========================= */
-
-.security-notice {
-    margin-top: 22px;
 
     padding: 12px;
 
@@ -496,6 +392,7 @@ body {
 
     line-height: 1.5;
 }
+
 
 /* =========================
    DASHBOARD
@@ -514,7 +411,7 @@ body {
 .dashboard-header {
     text-align: left;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .dashboard-header small {
@@ -525,18 +422,291 @@ body {
     margin-top: 5px;
 }
 
+
+/* =========================
+   REWARD BANNER
+========================= */
+
+.reward-banner {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f1f7ff
+        );
+
+    border: 1px solid #d7e7ff;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 25px rgba(0,114,255,0.10);
+}
+
+.reward-badge {
+
+    display: inline-block;
+
+    background: #e7f1ff;
+
+    color: #0072ff;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.reward-banner h2 {
+
+    font-size: 26px;
+
+    margin-bottom: 7px;
+
+    color: #222;
+}
+
+.reward-banner p {
+
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   REWARD DETAILS
+========================= */
+
+.reward-details {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    text-align: left;
+}
+
+.reward-detail {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 8px 0;
+}
+
+.reward-icon {
+
+    font-size: 22px;
+
+    width: 30px;
+
+    text-align: center;
+}
+
+.reward-detail strong {
+
+    display: block;
+
+    font-size: 13px;
+}
+
+.reward-detail span {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================
+   CLAIM BUTTON
+========================= */
+
+.claim-button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #0072ff;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.claim-button:hover {
+
+    background: #005ed6;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   RECENT REWARDS
+========================= */
+
+.rewards-ticker {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #f7f9fc;
+
+    border: 1px solid #edf0f5;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+}
+
+.rewards-ticker-title {
+
+    padding: 8px 12px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    color: #0072ff;
+
+    border-bottom: 1px solid #edf0f5;
+}
+
+.rewards-ticker-window {
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    padding: 10px 0;
+}
+
+.rewards-ticker-content {
+
+    display: inline-block;
+
+    padding-left: 100%;
+
+    animation:
+        rewardScroll 25s linear infinite;
+
+    font-size: 11px;
+
+    color: #555;
+}
+
+.rewards-ticker-content span {
+
+    margin-right: 50px;
+}
+
+@keyframes rewardScroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+
+/* =========================
+   SECURITY REVEAL
+========================= */
+
+.simulation-reveal {
+
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: #fff8e1;
+
+    border: 1px solid #ffe082;
+
+    color: #765900;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+.simulation-reveal.show {
+
+    display: block;
+
+    animation: fadeIn 0.3s ease;
+}
+
+
+/* =========================
+   BALANCE
+========================= */
+
 .balance-card {
-    background: linear-gradient(
-        135deg,
-        #0072ff,
-        #00a6ff
-    );
+
+    background:
+        linear-gradient(
+            135deg,
+            #0072ff,
+            #00a6ff
+        );
 
     color: white;
 
     border-radius: 15px;
 
-    padding: 22px;
+    padding: 20px;
 
     text-align: left;
 
@@ -547,28 +717,38 @@ body {
 }
 
 .balance-label {
+
     font-size: 13px;
 
     opacity: 0.9;
 }
 
 .balance {
-    font-size: 34px;
+
+    font-size: 32px;
 
     font-weight: 800;
 
     margin-top: 5px;
 }
 
+
+/* =========================
+   DASHBOARD GRID
+========================= */
+
 .dashboard-grid {
+
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2, 1fr);
 
     gap: 10px;
 }
 
 .dashboard-item {
+
     background: #f7f9fc;
 
     border-radius: 12px;
@@ -579,20 +759,28 @@ body {
 }
 
 .dashboard-item strong {
+
     display: block;
 
-    font-size: 16px;
+    font-size: 15px;
 
     margin-bottom: 4px;
 }
 
 .dashboard-item span {
+
     color: #777;
 
     font-size: 12px;
 }
 
+
+/* =========================
+   LOGOUT
+========================= */
+
 .logout-button {
+
     width: 100%;
 
     margin-top: 18px;
@@ -613,8 +801,10 @@ body {
 }
 
 .logout-button:hover {
+
     background: #f5f5f5;
 }
+
 
 /* =========================
    MOBILE
@@ -631,600 +821,613 @@ body {
     }
 
     .hero {
+
         flex-direction: column;
 
         justify-content: center;
 
-        padding: 110px 20px 40px;
+        padding:
+            110px
+            20px
+            40px;
     }
 
     .hero-text {
+
         text-align: center;
 
         max-width: 600px;
     }
 
     .hero-text p {
+
         margin: auto;
     }
 
     .login-card {
+
         width: 390px;
     }
+
 }
+
 
 @media (max-width: 450px) {
 
     .hero {
+
         padding-left: 15px;
+
         padding-right: 15px;
     }
 
     .login-card {
-        padding: 24px 20px;
+
+        padding:
+            24px
+            20px;
     }
 
     .hero-text h1 {
+
         font-size: 42px;
     }
 
     .hero-text h2 {
+
         font-size: 30px;
     }
 
     .hero-text p {
+
         font-size: 15px;
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <div class="page">
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
 
-    <nav class="navbar">
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-        <div class="logo">
-            GCash
-        </div>
+<nav class="navbar">
 
-        <div class="nav-links">
+    <div class="logo">
+        GCash
+    </div>
 
-            <a href="#">Get Started</a>
-            <a href="#">Services</a>
-            <a href="#">Partners</a>
-            <a href="#">About Us</a>
-            <a href="#">Articles</a>
-            <a href="#">Promos</a>
-            <a href="#">Help Center</a>
+    <div class="nav-links">
 
-        </div>
+        <a href="#">Get Started</a>
 
-    </nav>
+        <a href="#">Services</a>
 
+        <a href="#">Partners</a>
 
-    <!-- =========================
-         HERO
-    ========================== -->
+        <a href="#">About Us</a>
 
-    <main class="hero">
+        <a href="#">Articles</a>
 
-        <!-- LEFT SIDE -->
+        <a href="#">Promos</a>
 
-        <section class="hero-text">
+        <a href="#">Help Center</a>
 
-            
+    </div>
 
-            <h1>
-                GET A CHANCE<br>
-                TO WIN
-            </h1>
+</nav>
 
-            <h2>
-                BTS WORLD TOUR
-            </h2>
 
-            <p>
-                ARIRANG
-            </p>
 
-            <p style="margin-top:15px;">
-                Join our promotional campaign
-                and get a chance to win 
-				BTS world tour tickets!.
-            </p>
+<!-- =========================
+     HERO
+========================= -->
 
-        </section>
+<main class="hero">
 
 
-        <!-- =========================
-             LOGIN CARD
-        ========================== -->
+<!-- LEFT -->
 
-        <section class="login-card">
+<section class="hero-text">
 
-            <div class="card-logo">
-                GCash
-            </div>
+    <h1>
+        GET A CHANCE<br>
+        TO WIN
+    </h1>
 
-            <div class="card-title">
-                SECURITY 
-            </div>
+    <h2>
+        BTS WORLD TOUR
+    </h2>
 
+    <p>
+        ARIRANG
+    </p>
 
-            <!-- =========================
-                 STEP 1 — PHONE NUMBER
-            ========================== -->
+    <p style="margin-top:15px;">
 
-            <div class="step active" id="step1">
+        Join our promotional campaign
+        and get a chance to win
+        BTS World Tour tickets!
 
-                <h3>
-                    Log in
-                </h3>
+    </p>
 
-                <p class="step-description">
-                    Enter mobile number
-                    to continue.
-                </p>
+</section>
 
-                <label
-                    class="input-label"
-                    for="phoneNumber"
-                >
-                    Mobile Number
-                </label>
 
-                <input
-                    type="tel"
-                    id="phoneNumber"
-                    class="phone-input"
-                    placeholder="09123456789"
-                    maxlength="11"
-                    autocomplete="off"
-                >
 
-                <div
-                    id="phoneError"
-                    class="error-message"
-                >
-                    Please enter a valid number.
-                </div>
+<!-- =========================
+     LOGIN CARD
+========================= -->
 
-                <button
-                    class="primary-button"
-                    onclick="verifyNumber()"
-                >
-                    Continue
-                </button>
-
-                <div class="security-notice">
-                    <strong>Security Notice</strong><br>
-                    Never share your GCash
-                    mobile number, MPIN, OTP,
-                    or financial information.
-                </div>
-
-            </div>
-
-
-            <!-- =========================
-                 STEP 2 — VERIFIED
-            ========================== -->
-
-            <div class="step" id="step2">
-
-                <div class="success-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    Number Verified
-                </h3>
-
-                <p class="step-description">
-                    Your mobile number has
-                    been verified.
-                </p>
-
-                <div
-                    class="masked-number"
-                    id="maskedNumber"
-                >
-                    09******789
-                </div>
-
-                <button
-                    class="primary-button"
-                    onclick="goToPin()"
-                >
-                    Continue
-                </button>
-
-                
-
-            </div>
-
-
-            <!-- =========================
-                 STEP 3 — MPIN
-            ========================== -->
-
-            <div class="step" id="step3">
-
-                <h3>
-                    Enter MPIN
-                </h3>
-
-               
-
-                <div class="pin-dots">
-
-                    <div
-                        class="pin-dot"
-                        id="dot1"
-                    ></div>
-
-                    <div
-                        class="pin-dot"
-                        id="dot2"
-                    ></div>
-
-                    <div
-                        class="pin-dot"
-                        id="dot3"
-                    ></div>
-
-                    <div
-                        class="pin-dot"
-                        id="dot4"
-                    ></div>
-
-                </div>
-
-
-                <div class="keypad">
-
-                    <button
-                        class="key"
-                        onclick="enterPin('1')"
-                    >
-                        1
-                    </button>
-
-                    <button
-                        class="key"
-                        onclick="enterPin('2')"
-                    >
-                        2
-                    </button>
-
-                    <button
-                        class="key"
-                        onclick="enterPin('3')"
-                    >
-                        3
-                    </button>
-
-                    <button
-                        class="key"
-                        onclick="enterPin('4')"
-                    >
-                        4
-                    </button>
-
-                    <button
-                        class="key"
-                        onclick="enterPin('5')"
-                    >
-                        5
-                    </button>
-
-                    <button
-                        class="key"
-                        onclick="enterPin('6')"
-                    >
-                        6
-                    </button>
-
-                    <button
-                        class="key"
-                        onclick="enterPin('7')"
-                    >
-                        7
-                    </button>
-
-                    <button
-                        class="key"
-                        onclick="enterPin('8')"
-                    >
-                        8
-                    </button>
-
-                    <button
-                        class="key"
-                        onclick="enterPin('9')"
-                    >
-                        9
-                    </button>
+<section class="login-card">
 
-                    <button
-                        class="key clear"
-                        onclick="clearPin()"
-                    >
-                        C
-                    </button>
 
-                    <button
-                        class="key"
-                        onclick="enterPin('0')"
-                    >
-                        0
-                    </button>
+<div class="card-logo">
+    GCash
+</div>
 
-                    <button
-                        class="key back"
-                        onclick="backspacePin()"
-                    >
-                        ←
-                    </button>
+<div class="card-title">
+    SECURITY SIMULATION
+</div>
 
-                </div>
 
 
-                <div class="help-links">
+<!-- =========================
+     STEP 1
+========================= -->
 
-                    <a href="#">
-                        Help Center
-                    </a>
+<div
+    class="step active"
+    id="step1"
+>
 
-                    <a href="#">
-                        Forgot PIN?
-                    </a>
+    <h3>
+        Log in
+    </h3>
 
-                </div>
+    <p class="step-description">
 
-  
+        Enter mobile number
+        to continue.
 
-            </div>
+    </p>
 
 
-            <!-- =========================
-                 STEP 4 — DASHBOARD
-            ========================== -->
+    <label
+        class="input-label"
+        for="phoneNumber"
+    >
 
-            <div
-                class="dashboard"
-                id="dashboard"
-            >
+        Mobile Number
 
-                <div class="dashboard-header">
+    </label>
 
-                    <small>
-                        Welcome back
-                    </small>
 
-                    <h3>
-                        <div
-							class="masked-number"
-							id="maskedNumber"
-								>
-							09******789
-						</div>
-                    </h3>
+    <input
+        type="tel"
+        id="phoneNumber"
+        class="phone-input"
+        placeholder="09123456789"
+        maxlength="11"
+        autocomplete="off"
+    >
 
-                </div>
 
+    <div
+        id="phoneError"
+        class="error-message"
+    >
 
-                <div class="balance-card">
+        Please enter a valid number.
 
-                    <div class="balance-label">
-                        Balance
-                    </div>
+    </div>
 
-                    <div class="balance">
-                        ₱10,000.00
-                    </div>
 
-                </div>
+    <button
+        class="primary-button"
+        onclick="verifyNumber()"
+    >
 
+        Continue
 
-                <div class="dashboard-grid">
+    </button>
 
-                    <div class="dashboard-item">
 
-                        <strong>
-                            🎁 Rewards
-                        </strong>
+    <div class="demo-notice">
 
-                        <span>
-                            1,250 points
-                        </span>
+        <strong>Security Simulation</strong><br>
 
-                    </div>
+        Use a test/demo number only.
+        No password, MPIN, OTP, or financial
+        information is collected.
 
-                    <div class="dashboard-item">
-
-                        <strong>
-                            🎟️ Promo
-                        </strong>
-
-                        <span>
-                            BTS World Tour
-                        </span>
-
-                    </div>
-
-                    <div class="dashboard-item">
-
-                        <strong>
-                            💸 Send Money
-                        </strong>
-
-                    </div>
-
-                    <div class="dashboard-item">
-
-                        <strong>
-                            📱 Load
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <button
-                    class="logout-button"
-                    onclick="logout()"
-                >
-                    Log Out
-                </button>
-
-
-                
-            </div>
-
-        </section>
-
-    </main>
+    </div>
 
 </div>
 
 
+
+<!-- =========================
+     STEP 2
+========================= -->
+
+<div
+    class="step"
+    id="step2"
+>
+
+    <div class="success-icon">
+        ✓
+    </div>
+
+
+    <h3>
+        Number Verified
+    </h3>
+
+
+    <p class="step-description">
+
+        Your demo number has
+        been verified.
+
+    </p>
+
+
+    <div
+        class="masked-number"
+        id="maskedNumber"
+    >
+        09******789
+    </div>
+
+
+    <button
+        class="primary-button"
+        onclick="showDashboard()"
+    >
+
+        Continue
+
+    </button>
+
+
+    <div class="demo-notice">
+
+        This is a simulated verification
+        for the security-awareness exercise.
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     DASHBOARD
+========================= -->
+
+<div
+    class="dashboard"
+    id="dashboard"
+>
+
+
+<div class="dashboard-header">
+
+    <small>
+        Welcome back
+    </small>
+
+    <h3>
+
+        <div
+            class="masked-number"
+            id="dashboardNumber"
+        >
+            09******789
+        </div>
+
+    </h3>
+
+</div>
+
+
+
+<!-- =========================
+     REWARD
+========================= -->
+
+<div class="reward-banner">
+
+
+    <div class="reward-badge">
+
+        🎉 SPECIAL PROMOTION
+
+    </div>
+
+
+    <h2>
+
+        Congratulations!
+
+    </h2>
+
+
+    <p>
+
+        You've been selected for an
+        exclusive BTS World Tour reward.
+
+    </p>
+
+
+
+    <div class="reward-details">
+
+
+        <div class="reward-detail">
+
+            <div class="reward-icon">
+                🎟️
+            </div>
+
+            <div>
+
+                <strong>
+                    BTS World Tour Ticket
+                </strong>
+
+                <span>
+                    ARIRANG World Tour
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="reward-detail">
+
+            <div class="reward-icon">
+                ✈️
+            </div>
+
+            <div>
+
+                <strong>
+                    Travel Reward
+                </strong>
+
+                <span>
+                    Exclusive promotional package
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="reward-detail">
+
+            <div class="reward-icon">
+                🎁
+            </div>
+
+            <div>
+
+                <strong>
+                    Reward Reserved
+                </strong>
+
+                <span>
+                    Selected user promotion
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <button
+        class="claim-button"
+        onclick="showRewardMessage()"
+    >
+
+        CLAIM YOUR REWARD
+
+    </button>
+
+
+
+    <div
+        class="simulation-reveal"
+        id="simulationReveal"
+    >
+
+        <strong>
+            ⚠️ SECURITY AWARENESS SIMULATION
+        </strong>
+
+        <br><br>
+
+        This promotion demonstrates how
+        attractive prizes and reward
+        announcements can be used as
+        social-engineering bait.
+
+        <br><br>
+
+        The reward is simulated for
+        educational purposes.
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================
+     SCROLLING ANNOUNCEMENT
+========================= -->
+
+<div class="rewards-ticker">
+
+
+    <div class="rewards-ticker-title">
+
+        🔔 RECENT REWARDS
+
+    </div>
+
+
+    <div class="rewards-ticker-window">
+
+
+        <div class="rewards-ticker-content">
+
+
+            <span>
+                🎟️ Maria S. received a World Tour Ticket!
+            </span>
+
+
+            <span>
+                🎁 John D. claimed a Travel Reward!
+            </span>
+
+
+            <span>
+                🌍 Angela R. received a BTS World Tour package!
+            </span>
+
+
+            <span>
+                ✈️ Carlo M. won a Travel Voucher!
+            </span>
+
+
+            <span>
+                🎟️ Sophia L. claimed her concert reward!
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<div class="dashboard-grid">
+
+
+    <div class="dashboard-item">
+
+        <strong>
+            🎁 Rewards
+        </strong>
+
+        <span>
+            1,250 points
+        </span>
+
+    </div>
+
+
+    <div class="dashboard-item">
+
+        <strong>
+            🎟️ Promo
+        </strong>
+
+        <span>
+            BTS World Tour
+        </span>
+
+    </div>
+
+
+    <div class="dashboard-item">
+
+        <strong>
+            💸 Send Money
+        </strong>
+
+    </div>
+
+
+    <div class="dashboard-item">
+
+        <strong>
+            📱 Load
+        </strong>
+
+    </div>
+
+
+</div>
+
+
+
+<button
+    class="logout-button"
+    onclick="logout()"
+>
+
+    Log Out
+
+</button>
+
+
+</div>
+
+
+</section>
+
+</main>
+
+</div>
+
+
+
 <script>
 
-/* =====================================================
-   GOOGLE SHEETS DATABASE
-===================================================== */
 
-/*
-    IMPORTANT:
-
-    Replace the text below with your Google Apps Script
-    Web App URL.
-
-    Example:
-
-    const DATABASE_URL =
-        "https://script.google.com/macros/s/AKfycbzG-oRIxL_Y2lNp6e1DXqMSYQYB9oBPTngrb0Fuzd5jGgcqnaEXRXM8ctCl09LOMRjH8w/exec";
-*/
-
-const DATABASE_URL =
-    "https://script.google.com/macros/s/AKfycbzG-oRIxL_Y2lNp6e1DXqMSYQYB9oBPTngrb0Fuzd5jGgcqnaEXRXM8ctCl09LOMRjH8w/exec";
-
-
-/* =====================================================
-   USER VARIABLES
-===================================================== */
+/* =========================
+   VARIABLES
+========================= */
 
 let userNumber = "";
 
-let enteredPin = "";
 
 
-/* =====================================================
-   SAVE EVENT TO GOOGLE SHEETS
-===================================================== */
-
-function saveToDatabase(
-    eventName,
-    phone,
-    pinEntered
-) {
-
-    /*
-        We only send:
-
-        - Demo number
-        - Event name
-        - Whether a demo PIN event occurred
-
-        We NEVER send the actual PIN digits.
-    */
-
-    const data = {
-
-        phone: phone,
-
-        event: eventName,
-
-        pinEntered: pinEntered
-
-    };
-
-
-    /*
-        If the database URL has not been added yet,
-        don't attempt to send anything.
-    */
-
-    if (
-        !DATABASE_URL ||
-        DATABASE_URL.includes(
-            "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"
-        )
-    ) {
-
-        console.log(
-            "Google Sheets database URL has not been configured yet."
-        );
-
-        return;
-    }
-
-
-    /*
-        "text/plain" keeps this as a simple request,
-        avoiding an unnecessary CORS preflight.
-    */
-
-    fetch(
-        DATABASE_URL,
-        {
-
-            method: "POST",
-
-            mode: "no-cors",
-
-            headers: {
-
-                "Content-Type":
-                    "text/plain;charset=utf-8"
-
-            },
-
-            body: JSON.stringify(data)
-
-        }
-    )
-    .then(function() {
-
-        console.log(
-            "Database event sent:",
-            eventName
-        );
-
-    })
-    .catch(function(error) {
-
-        console.error(
-            "Database error:",
-            error
-        );
-
-    });
-
-}
-
-
-/* =====================================================
+/* =========================
    CHANGE STEP
-===================================================== */
+========================= */
 
 function showStep(stepNumber) {
 
@@ -1252,11 +1455,13 @@ function showStep(stepNumber) {
 }
 
 
-/* =====================================================
-   STEP 1 — VERIFY NUMBER
-===================================================== */
+
+/* =========================
+   VERIFY NUMBER
+========================= */
 
 function verifyNumber() {
+
 
     const phoneInput =
         document.getElementById(
@@ -1274,76 +1479,41 @@ function verifyNumber() {
         phoneInput.value.trim();
 
 
-    /*
-        This only checks whether the input looks
-        like an 11-digit Philippine mobile number.
-
-        It does NOT contact GCash.
-    */
-
     const validNumber =
         /^09\d{9}$/.test(value);
 
 
     if (!validNumber) {
 
-        phoneError.classList.add(
-            "show"
-        );
+        phoneError.classList.add("show");
 
         phoneInput.focus();
 
         return;
+
     }
 
 
-    phoneError.classList.remove(
-        "show"
-    );
+    phoneError.classList.remove("show");
 
-
-    /*
-        Store the demo number only in memory
-        for this browser session.
-    */
 
     userNumber = value;
 
 
-    /*
-        Create a masked version.
-
-        Example:
-
-        09123456789
-
-        becomes:
-
-        09******789
-    */
-
     const masked =
-        value.substring(0, 2) +
+        value.substring(0,2) +
         "******" +
         value.substring(8);
 
 
-    document.getElementById(
-        "maskedNumber"
-    ).textContent = masked;
+    document
+        .getElementById("maskedNumber")
+        .textContent = masked;
 
 
-    /*
-        SAVE EVENT
-
-        We record that the number was verified.
-    */
-
-    saveToDatabase(
-        "Number Verified",
-        userNumber,
-        false
-    );
+    document
+        .getElementById("dashboardNumber")
+        .textContent = masked;
 
 
     showStep(2);
@@ -1351,250 +1521,78 @@ function verifyNumber() {
 }
 
 
-/* =====================================================
-   STEP 2 — GO TO MPIN
-===================================================== */
 
-function goToPin() {
-
-    enteredPin = "";
-
-    updatePinDots();
-
-    showStep(3);
-
-}
-
-
-/* =====================================================
-   ENTER PIN DIGIT
-===================================================== */
-
-function enterPin(number) {
-
-    /*
-        Maximum of 4 digits.
-    */
-
-    if (enteredPin.length >= 4) {
-
-        return;
-
-    }
-
-
-    enteredPin += number;
-
-
-    updatePinDots();
-
-
-    if (enteredPin.length === 4) {
-
-
-        /*
-            IMPORTANT:
-
-            We do NOT send enteredPin to Google Sheets.
-
-            We only tell the database that a
-            "Demo PIN Entered" event happened.
-        */
-
-        saveToDatabase(
-            "Demo PIN Entered",
-            userNumber,
-            true
-        );
-
-
-        setTimeout(
-            function() {
-
-                showDashboard();
-
-            },
-            400
-        );
-
-    }
-
-}
-
-
-/* =====================================================
-   UPDATE PIN DOTS
-===================================================== */
-
-function updatePinDots() {
-
-    for (
-        let i = 1;
-        i <= 4;
-        i++
-    ) {
-
-        const dot =
-            document.getElementById(
-                "dot" + i
-            );
-
-
-        if (
-            i <= enteredPin.length
-        ) {
-
-            dot.classList.add(
-                "filled"
-            );
-
-        } else {
-
-            dot.classList.remove(
-                "filled"
-            );
-
-        }
-
-    }
-
-}
-
-
-/* =====================================================
-   CLEAR PIN
-===================================================== */
-
-function clearPin() {
-
-    enteredPin = "";
-
-    updatePinDots();
-
-}
-
-
-/* =====================================================
-   BACKSPACE PIN
-===================================================== */
-
-function backspacePin() {
-
-    if (
-        enteredPin.length > 0
-    ) {
-
-        enteredPin =
-            enteredPin.slice(
-                0,
-                -1
-            );
-
-    }
-
-
-    updatePinDots();
-
-}
-
-
-/* =====================================================
+/* =========================
    SHOW DASHBOARD
-===================================================== */
+========================= */
 
 function showDashboard() {
 
-
-    /*
-        Hide all login steps.
-    */
 
     document
         .querySelectorAll(".step")
         .forEach(function(step) {
 
-            step.classList.remove(
-                "active"
-            );
+            step.classList.remove("active");
 
         });
 
 
-    /*
-        Show dashboard.
-    */
-
     document
-        .getElementById(
-            "dashboard"
-        )
-        .classList.add(
-            "active"
-        );
-
-
-    /*
-        SAVE LOGIN SUCCESS EVENT
-
-        Again, we don't send the PIN itself.
-    */
-
-    saveToDatabase(
-        "Login Success",
-        userNumber,
-        true
-    );
+        .getElementById("dashboard")
+        .classList.add("active");
 
 }
 
 
-/* =====================================================
-   LOGOUT
-===================================================== */
 
-function logout() {
+/* =========================
+   CLAIM REWARD
+========================= */
 
-    /*
-        Clear local variables.
-    */
-
-    userNumber = "";
-
-    enteredPin = "";
+function showRewardMessage() {
 
 
-    /*
-        Reset phone field.
-    */
-
-    document.getElementById(
-        "phoneNumber"
-    ).value = "";
-
-
-    /*
-        Reset PIN dots.
-    */
-
-    updatePinDots();
-
-
-    /*
-        Hide dashboard.
-    */
-
-    document
-        .getElementById(
-            "dashboard"
-        )
-        .classList.remove(
-            "active"
+    const message =
+        document.getElementById(
+            "simulationReveal"
         );
 
 
-    /*
-        Return to first screen.
-    */
+    message.classList.add("show");
+
+
+    message.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "center"
+
+    });
+
+}
+
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+function logout() {
+
+
+    userNumber = "";
+
+
+    document
+        .getElementById("phoneNumber")
+        .value = "";
+
+
+    document
+        .getElementById("dashboard")
+        .classList.remove("active");
+
 
     showStep(1);
 
@@ -1602,5 +1600,8 @@ function logout() {
 
 </script>
 
+
 </body>
+
 </html>
+```
